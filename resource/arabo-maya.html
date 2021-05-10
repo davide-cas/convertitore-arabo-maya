@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+<meta charset="UTF-8">
+   <meta name="description" content="Davide's Website">
+   <title> Convertitore Maya </title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+
+
+    <div id="indice">
+	<h4><span class ="imgmoodle" > <img alt="moodle" src="images/moodle.png" width="25" height="25"> <a href="http://moodle.dmi.unict.it/moodle/course/category.php?id=85"> MOODLE's HOMEPAGE </a> </span>
+  <span class="eslink"> <br><br><br> <a href="esercitazione-arabo-maya.html"> AREA ESERCITAZIONE ARABO ➝ MAYA </a></span>  </h4> 
+</div>
+   <hr>  
+   <h3> <span style="font-size:1.6em"> CONVERSIONE: <small> ARABO ➝ MAYA </small>  </span></h3>
+   <p> INSERIRE IL VALORE CHE SI DESIDERA CONVERTIRE:
+   <!-- accetterà l'input fino ad un massimo di 1279999999 -->
+   <input type="number" style="height:24px;width:150px;text-align:center; font-size:20px" autocomplete="off" id="valore" max="1279999999" placeholder="Inserire valore" onKeyDown="if(event.keyCode==13) converti();" />
+   <button id="bottone" style="height:23px;width:100px" onclick="converti()">CONVERTI</button> 
+   <button type="button" style="height:23px;width:60px" id="PulisciCampi" onclick="clean()">RESET</button></p>
+
+  <p> VALORE CONVERTITO: </p> <!-- Di seguito vengono generate le immagini nascoste che prenderanno il valore del simbolo maya-->
+ <input id="n1"  type="image" alt="text1">
+ <input id="n2"  type="image" alt="text2">
+ <input id="n3"  type="image" alt="text3">
+ <input id="n4"  type="image" alt="text4">
+ <input id="n5"  type="image" alt="text5">
+ <input id="n6"  type="image" alt="text6">
+ <input id="n7"  type="image" alt="text7">
+ 
+
+   <p id="spiegazione2"></p><!-- il testo con id "spiegazione2" non è visibile fino a che non viene generato un risultato-->
+ <hr>
+
+ <footer>
+   <h5> 🏠 <a href="homepage.html"> HOME  </a> </h5>
+   <h5> 📝 <a href="maya-arabo.html"> MAYA ➝ ARABO  </a> </h5>
+   <h5> 📖 <a href="guida_utilizzo.html"> GUIDA ALL'UTILIZZO  </a> </h5>
+   <h5> 🔢 <a href="indice_alfabeto.html"> INDICE ALFABETO </a> </h5>
+   <h5> 👨🏻‍💻 <a href="contatti.html"> CONTATTI  </a> </h5>
+   <div class="piedipagina">
+   <span style="font-size:1.2em"> SITO INTERAMENTE SVILUPPATO DA: </span> DAVIDE CASANO, VALERIO CATANIA, GAETANO CUNTO e DANILO GIUFFRIDA
+   </div>
+ </footer>
+
+ <script>
+ /*  Dichiarazione dell'array di immagini denominato imgArray*/
+var imgArray= new Array(); 
+imgArray[0] = new Image();
+imgArray[0].src = 'NUMERI_DA_0_A_19/0.png';
+/*  Alla posizione 0 dell'array viene assegnato l'immagine contenende il simbolo maya di valore "0" */
+
+imgArray[1] = new Image();
+imgArray[1].src = 'NUMERI_DA_0_A_19/1.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'NUMERI_DA_0_A_19/2.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'NUMERI_DA_0_A_19/3.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'NUMERI_DA_0_A_19/4.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'NUMERI_DA_0_A_19/5.png';
+
+imgArray[6] = new Image();
+imgArray[6].src = 'NUMERI_DA_0_A_19/6.png';
+
+imgArray[7] = new Image();
+imgArray[7].src = 'NUMERI_DA_0_A_19/7.png';
+
+imgArray[8] = new Image();
+imgArray[8].src = 'NUMERI_DA_0_A_19/8.png';
+
+imgArray[9] = new Image();
+imgArray[9].src = 'NUMERI_DA_0_A_19/9.png';
+
+imgArray[10] = new Image();
+imgArray[10].src = 'NUMERI_DA_0_A_19/10.png';
+
+imgArray[11] = new Image();
+imgArray[11].src = 'NUMERI_DA_0_A_19/11.png';
+
+imgArray[12] = new Image();
+imgArray[12].src = 'NUMERI_DA_0_A_19/12.png';
+
+imgArray[13] = new Image();
+imgArray[13].src = 'NUMERI_DA_0_A_19/13.png';
+
+imgArray[14] = new Image();
+imgArray[14].src = 'NUMERI_DA_0_A_19/14.png';
+
+imgArray[15] = new Image();
+imgArray[15].src = 'NUMERI_DA_0_A_19/15.png';
+
+imgArray[16] = new Image();
+imgArray[16].src = 'NUMERI_DA_0_A_19/16.png';
+
+imgArray[17] = new Image();
+imgArray[17].src = 'NUMERI_DA_0_A_19/17.png';
+
+imgArray[18] = new Image();
+imgArray[18].src = 'NUMERI_DA_0_A_19/18.png';
+
+imgArray[19] = new Image();
+imgArray[19].src = 'NUMERI_DA_0_A_19/19.png';
+
+function converti() {
+ var numero=document.getElementById('valore').value; /* la variabile assume il valore del numero dato in input dall'utente  */
+ if(numero>1279999999)
+ {
+ window.alert("È possibile rappresentare fino ad un massimo di 7 caratteri Maya.") /*  verifica del valore inserito, ritorna un errore se viene superato il numero massimo rappresentabile */
+ }
+ else if(numero<0)
+ {
+ window.alert("Non è possibile inserire un numero inferiore a zero.") /* verifica del valore inserito se è un numero negativo darà un errore */
+ }
+ else
+ {
+ var resto=0; /*  inizializzazione della variabile che assume il valore del resto */
+ document.getElementById("n1").style.display="none";
+ document.getElementById("n2").style.display="none";
+ document.getElementById("n3").style.display="none";
+ document.getElementById("n4").style.display="none";
+ document.getElementById("n5").style.display="none";
+ document.getElementById("n6").style.display="none";
+ document.getElementById("n7").style.display="none";
+ if(numero!=0||numero==0&&i==0&&document.getElementById('valore').value!="")
+ document.getElementById("spiegazione2").innerHTML = "IL RISULTATO È OTTENUTO DA: ";
+ 
+ /* se le condizioni vengono rispettate si eseguirà il ciclo fino a che il numero non sarà più divisibile*/
+ for(var i=0; numero!=0||numero==0&&i==0&&document.getElementById('valore').value!=""; i++){
+   resto = parseInt(numero % 20);
+   document.getElementById("spiegazione2").innerHTML += numero+"/20 "+"R: "+resto+" | ";  /*  riempie il testo che mostra i calcoli eseguiti*/
+   numero= parseInt(numero/20);
+/* la variabile "i" indica a quale carattere maya si è arrivati (fino ad un massimo di 7) e tramite il valore di resto verrà mostrata il carattere maya relativo a quel valore*/
+   if(i==0)  
+   {
+    document.getElementById("n7").style.display="block"; /*  linea di codice che lo rende visibile*/
+    document.getElementById("n7").src=imgArray[resto].src; /*  assegnamento all'elemento n7 il simbolo maya corrispondente, tramite il valore del resto*/
+   }
+
+   if(i==1)
+   {
+    document.getElementById("n6").style.display="block";
+    document.getElementById("n6").src=imgArray[resto].src;
+   }
+
+   if(i==2)
+   {
+    document.getElementById("n5").style.display="block";
+    document.getElementById("n5").src=imgArray[resto].src;
+   }
+
+   if(i==3)
+   {
+    document.getElementById("n4").style.display="block";
+    document.getElementById("n4").src=imgArray[resto].src;
+   }
+
+   if(i==4)
+   {
+    document.getElementById("n3").style.display="block";
+    document.getElementById("n3").src=imgArray[resto].src;
+   }
+
+   if(i==5)
+   {
+    document.getElementById("n2").style.display="block";
+    document.getElementById("n2").src=imgArray[resto].src;
+   }
+
+   if(i==6)
+   {
+    document.getElementById("n1").style.display="block";
+    document.getElementById("n1").src=imgArray[resto].src;
+   }
+
+ }
+ }
+}
+/*  La funzione clean come dal nome si occupa del reset della pagina*/
+function clean(){ 
+/*  Vengono nascosti nuovamente i bottoni*/
+ document.getElementById("n1").style.display="none";
+ document.getElementById("n2").style.display="none";
+ document.getElementById("n3").style.display="none";
+ document.getElementById("n4").style.display="none";
+ document.getElementById("n5").style.display="none";
+ document.getElementById("n6").style.display="none";
+ document.getElementById("n7").style.display="none";
+ /*  Viene resettato il testo della casella "spiegazione"*/
+ document.getElementById("spiegazione2").innerHTML = "";
+  /*  Viene resettato il testo dell'elemento "valore"*/
+ document.getElementById('valore').value = "";
+ /*  Vengono resettate le variabili*/
+ resto=0;
+ numero=0;
+ i=0;
+ }
+</script>
+  </body>
+ </html>

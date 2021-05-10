@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Davide's Website">
+   <title> Convertitore Maya </title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+
+ <body>
+	<h4><span class ="imgmoodle" > <img alt="moodle" src="images/moodle.png" width="25" height="25"> <a href="http://moodle.dmi.unict.it/moodle/course/category.php?id=85"> MOODLE's HOMEPAGE </a> </span>
+	<span class="eslink"> <br><br><br> <a href="esercitazione-maya-arabo.html"> AREA ESERCITAZIONE MAYA ➝ ARABO </a> </span></h4>
+   <hr>  
+   <h3>	<span style="font-size:1.6em"> CONVERSIONE: <small> MAYA ➝ ARABO </small> </span> </h3> <br><br><br> INSERIRE IL VALORE CHE SI DESIDERA CONVERTIRE: <div id="mayapos">
+		  <!-- Di seguito vengono generate le immagini nascoste che prenderanno il valore del simbolo maya-->
+		  VALORE MAYA SELEZIONATO: <br><br><br><br><br><br><br><br><br>
+			<input id="m1"  type="image" alt="text1">
+			<input id="m2"  type="image" alt="text2">
+			<input id="m3"  type="image" alt="text3">
+			<input id="m4"  type="image" alt="text4">
+			<input id="m5"  type="image" alt="text5">
+			<input id="m6"  type="image" alt="text6">
+			<input id="m7"  type="image" alt="text7">
+		  </div>
+   <p> <br> <br>
+			<!-- Tabella per la selezione dei simboli maya-->
+          <table>
+              <tr>
+                  <td><input value=" " id="b1" type="button" class ="BOTTONE0" onclick="insert(0)"> </td>
+                  <td><input value=" " id="b2" type="button" class ="BOTTONE1" onclick="insert(1)"></td>
+                  <td><input value=" " id="b3" type="button" class ="BOTTONE2" onclick="insert(2)"></td>
+                  <td><input value=" " id="b4" type="button" class ="BOTTONE3" onclick="insert(3)"></td>
+                  <td><input value=" " id="b5" type="button" class ="BOTTONE4" onclick="insert(4)"></td>
+              </tr>
+              <tr>
+                  <td><input value=" " id="b6" type="button" class ="BOTTONE5" onclick="insert(5)"></td>
+                  <td><input value=" " id="b7" type="button" class ="BOTTONE6" onclick="insert(6)"></td>
+                  <td><input value=" " id="b8" type="button" class ="BOTTONE7" onclick="insert(7)"></td>
+                  <td><input value=" " id="b9" type="button" class ="BOTTONE8" onclick="insert(8)"></td>
+                  <td><input value=" " id="b10" type="button" class ="BOTTONE9" onclick="insert(9)"></td>
+              </tr>
+              <tr>
+                  <td><input value=" " id="b11" type="button" class ="BOTTONE10" onclick="insert(10)"></td>
+                  <td><input value=" " id="b12" type="button" class ="BOTTONE11" onclick="insert(11)"></td>
+                  <td><input value=" " id="b13" type="button" class ="BOTTONE12" onclick="insert(12)"></td>
+                  <td><input value=" " id="b14" type="button" class ="BOTTONE13" onclick="insert(13)"></td>
+                  <td><input value=" " id="b15" type="button" class ="BOTTONE14" onclick="insert(14)"></td>
+              </tr>
+              <tr>
+                  <td><input value=" " id="b16" type="button" class ="BOTTONE15" onclick="insert(15)"></td>
+                  <td><input value=" " id="b17" type="button" class ="BOTTONE16" onclick="insert(16)"></td>
+                  <td><input value=" " id="b18" type="button" class ="BOTTONE17" onclick="insert(17)"></td>
+                  <td><input value=" " id="b19" type="button" class ="BOTTONE18" onclick="insert(18)"></td>
+                  <td><input value=" " id="b20" type="button" class ="BOTTONE19" onclick="insert(19)"></td>
+              </tr>
+          </table>
+		  <br><br>
+		      <h2> VALORE CONVERTITO:
+			<input type="number" style="height:23px;width:150px;text-align:center; font-size:20px" id="risultatoconv" readonly placeholder="Risultato">
+			<button type="button" style="height:23px;width:60px" id="PulisciCampi" onclick="clean()">RESET</button>  </h2>
+		  <br><br>
+		  <!-- il testo con id "calcoli" non è visibile fino a che non viene generato un risultato-->
+			<p id="calcoli"> IL RISULTATO È OTTENUTO DA:
+<br> <br>
+   <hr>
+
+ <footer>
+   <h5> 🏠 <a href="homepage.html"> HOME  </a> </h5>
+   <h5> 📝 <a href="arabo-maya.html"> ARABO ➝ MAYA  </a> </h5>
+   <h5> 📖 <a href="guida_utilizzo.html"> GUIDA ALL'UTILIZZO  </a> </h5>
+   <h5> 🔢 <a href="indice_alfabeto.html"> INDICE ALFABETO </a> </h5>
+   <h5> 👨🏻‍💻 <a href="contatti.html"> CONTATTI  </a> </h5>
+   <p>
+     <div class="piedipagina">
+      <span style="font-size:1.2em"> SITO INTERAMENTE SVILUPPATO DA: </span> DAVIDE CASANO, VALERIO CATANIA, GAETANO CUNTO e DANILO GIUFFRIDA
+     </div>
+
+ </footer>
+      <script>
+			/* L'array "numarr" conterrà i numeri generati dalle successive divisioni*/
+			var numarr= new Array();
+			/* Indice dell'array*/	
+            var i=0;
+			/* La variabile potenza conterrà il valore numerico arabo che è il risultato di 20^i* il valore del simbolo maya */
+			var potenza=0;
+			 // Dichiarazione dell'array di immagini denominato imgArray*/
+			var imgArray= new Array();
+				imgArray[0] = new Image();
+				imgArray[0].src = 'NUMERI_DA_0_A_19/0.png';
+				/* Alla posizione 0 dell'array viene assegnato l'immagine contenende il simbolo maya di valore "0" */
+				imgArray[1] = new Image();
+				imgArray[1].src = 'NUMERI_DA_0_A_19/1.png';
+
+				imgArray[2] = new Image();
+				imgArray[2].src = 'NUMERI_DA_0_A_19/2.png';
+
+				imgArray[3] = new Image();
+				imgArray[3].src = 'NUMERI_DA_0_A_19/3.png';
+
+				imgArray[4] = new Image();
+				imgArray[4].src = 'NUMERI_DA_0_A_19/4.png';
+
+				imgArray[5] = new Image();
+				imgArray[5].src = 'NUMERI_DA_0_A_19/5.png';
+
+				imgArray[6] = new Image();
+				imgArray[6].src = 'NUMERI_DA_0_A_19/6.png';
+
+				imgArray[7] = new Image();
+				imgArray[7].src = 'NUMERI_DA_0_A_19/7.png';
+
+				imgArray[8] = new Image();
+				imgArray[8].src = 'NUMERI_DA_0_A_19/8.png';
+
+				imgArray[9] = new Image();
+				imgArray[9].src = 'NUMERI_DA_0_A_19/9.png';
+
+				imgArray[10] = new Image();
+				imgArray[10].src = 'NUMERI_DA_0_A_19/10.png';
+
+				imgArray[11] = new Image();
+				imgArray[11].src = 'NUMERI_DA_0_A_19/11.png';
+
+				imgArray[12] = new Image();
+				imgArray[12].src = 'NUMERI_DA_0_A_19/12.png';
+
+				imgArray[13] = new Image();
+				imgArray[13].src = 'NUMERI_DA_0_A_19/13.png';
+
+				imgArray[14] = new Image();
+				imgArray[14].src = 'NUMERI_DA_0_A_19/14.png';
+
+				imgArray[15] = new Image();
+				imgArray[15].src = 'NUMERI_DA_0_A_19/15.png';
+
+				imgArray[16] = new Image();
+				imgArray[16].src = 'NUMERI_DA_0_A_19/16.png';
+
+				imgArray[17] = new Image();
+				imgArray[17].src = 'NUMERI_DA_0_A_19/17.png';
+
+				imgArray[18] = new Image();
+				imgArray[18].src = 'NUMERI_DA_0_A_19/18.png';
+
+				imgArray[19] = new Image();
+				imgArray[19].src = 'NUMERI_DA_0_A_19/19.png';
+
+			/* La seguente funzione mette visibili gli elementi nascosti precedentemente e gli assegna il simbolo maya selezionato dall'utente*/
+			function insert(num){
+				if(i==0){
+				document.getElementById("m7").style.display="block"; /* linea di codice che rende visibile l'immagine*/
+				document.getElementById("m7").src=imgArray[num].src; /* assegnamento all'elemento m7 il simbolo maya corrispondente*/
+				}
+				if(i==1){
+				document.getElementById("m6").style.display="block";
+				document.getElementById("m6").src=imgArray[num].src;
+				}
+				if(i==2){
+				document.getElementById("m5").style.display="block";
+				document.getElementById("m5").src=imgArray[num].src;
+				}
+				if(i==3){
+				document.getElementById("m4").style.display="block";
+				document.getElementById("m4").src=imgArray[num].src;
+				}
+				if(i==4){
+				document.getElementById("m3").style.display="block";
+				document.getElementById("m3").src=imgArray[num].src;
+				}
+				if(i==5){
+				document.getElementById("m2").style.display="block";
+				document.getElementById("m2").src=imgArray[num].src;
+				}
+				if(i==6){
+				document.getElementById("m1").style.display="block";
+				document.getElementById("m1").src=imgArray[num].src;
+				}
+				numarr[i]=parseInt(num); /* Alla posizione "i" dell'array "numarr" viene assegnato il valore del simbolo maya selezionato dall'utente*/
+				
+				potenza=potenza+(numarr[i]*Math.pow(20,i));/* la seguente linea di codice si occupa della conversione da maya ad arabo, "i" assumerà il valore di indice della potenza, */
+															/*20 sarà la base e numarr il valore del simbolo maya selezionato*/
+						
+				/* Il seguente codice si occupa di mostrare a schermo i calcoli eseguiti per arrivare alla soluzione*/									
+				if (i==0) 
+				document.getElementById("calcoli").innerHTML += "20^" +i+ "*" +numarr[i]; /* Esempio di output 20^0*18*/
+				else if(i>0 && i<6)
+				/* Si tratta di numeri successivi al primo quindi sono separati da un simbolo di somma "+" Esempio di output "+ 20^0*18"*/
+				document.getElementById("calcoli").innerHTML += " + " + "20^" +i+ "*" +numarr[i]; 
+				else
+				document.getElementById("calcoli").innerHTML += " + "+  "20^" +i+ "*" +numarr[i];
+				i++;
+				document.getElementById("risultatoconv").value = potenza;
+				
+				/* La funziona disabilita i bottoni che l'utente utilizza per selezionare i simboli maya una volta arrivato al settimo simbolo*/
+				if(i==7)
+				{
+				document.getElementById("b1").disabled = true;
+				document.getElementById("b2").disabled = true;
+				document.getElementById("b3").disabled = true;
+				document.getElementById("b4").disabled = true;
+				document.getElementById("b5").disabled = true;
+				document.getElementById("b6").disabled = true;
+				document.getElementById("b7").disabled = true;
+				document.getElementById("b8").disabled = true;
+				document.getElementById("b9").disabled = true;
+				document.getElementById("b10").disabled = true;
+				document.getElementById("b11").disabled = true;
+				document.getElementById("b12").disabled = true;
+				document.getElementById("b13").disabled = true;
+				document.getElementById("b14").disabled = true;
+				document.getElementById("b15").disabled = true;
+				document.getElementById("b16").disabled = true;
+				document.getElementById("b17").disabled = true;
+				document.getElementById("b18").disabled = true;
+				document.getElementById("b19").disabled = true;
+				document.getElementById("b20").disabled = true;
+				}
+
+            }
+			/* La funzione clean come dal nome si occupa del reset della pagina*/
+            function clean(){
+			    /* Vengono resettate le variabili*/
+				i=0;
+				potenza=0;
+				document.getElementById("risultatoconv").value =" ";
+				/* Vengono nascosti nuovamente i bottoni*/
+				document.getElementById("m7").style.display="none";
+				document.getElementById("m6").style.display="none";
+				document.getElementById("m5").style.display="none";
+				document.getElementById("m4").style.display="none";
+				document.getElementById("m3").style.display="none";
+				document.getElementById("m2").style.display="none";
+				document.getElementById("m1").style.display="none";
+				/* Vengono riabilitati i tasti di selezioni dei simboli maya*/
+				document.getElementById("b1").disabled = false;
+				document.getElementById("b2").disabled = false;
+				document.getElementById("b3").disabled = false;
+				document.getElementById("b4").disabled = false;
+				document.getElementById("b5").disabled = false;
+				document.getElementById("b6").disabled = false;
+				document.getElementById("b7").disabled = false;
+				document.getElementById("b8").disabled = false;
+				document.getElementById("b9").disabled = false;
+				document.getElementById("b10").disabled = false;
+				document.getElementById("b11").disabled = false;
+				document.getElementById("b12").disabled = false;
+				document.getElementById("b13").disabled = false;
+				document.getElementById("b14").disabled = false;
+				document.getElementById("b15").disabled = false;
+				document.getElementById("b16").disabled = false;
+				document.getElementById("b17").disabled = false;
+				document.getElementById("b18").disabled = false;
+				document.getElementById("b19").disabled = false;
+				document.getElementById("b20").disabled = false;
+				/* Viene resettato il testo della casella "calcoli"*/
+				document.getElementById("calcoli").innerHTML = "IL RISULTATO È OTTENUTO DA: <br> <br> \n";
+            }
+          </script>
+ </body>
+
+ </html>

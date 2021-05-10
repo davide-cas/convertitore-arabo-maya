@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+<meta charset="UTF-8">
+   <meta name="description" content="Davide's Website">
+   <title> Convertitore Maya </title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+
+
+   	<h4> <span class ="imgmoodle" ><img alt="moodle" src="images/moodle.png" width="25" height="25"> <a href="http://moodle.dmi.unict.it/moodle/course/category.php?id=85"> MOODLE's HOMEPAGE </a> </span>
+	<span class="eslink"> <br><br><br> <a href="maya-arabo.html"> CONVERSIONE MAYA ➝ ARABO </a> </span></h4>
+   <hr>  
+   <h3> <span style="font-size:1.6em"> ESERCITAZIONE: <small> MAYA ➝ ARABO </small>  </span></h3>
+   <p> GENERA DEI CARATTERI MAYA CASUALI:
+   <button id="bottone1" style="height:25px;width:170px" onclick="converti()">GENERA NUMERO</button> <button type="button" style="height:25px;width:60px" id="PulisciCampi" onclick="clean()">RESET</button></p>
+  <p> VALORE DA CONVERTIRE IN ARABO: </p>    <!-- Di seguito vengono generate le immagini nascoste che prenderanno il valore del simbolo maya-->
+		 <div id="container">
+		 <input id="n1"  type="image" alt="text1">
+		 <input id="n2"  type="image" alt="text2">
+		 <ul id="textn3"> </ul>
+		 <input id="n3"  type="image" alt="text3">
+		 <ul id="textn4"> </ul>
+		 <input id="n4"  type="image" alt="text4">
+		 <ul id="textn5"> </ul>
+		 <input id="n5"  type="image" alt="text5">
+		 <ul id="textn6"> </ul>
+		 <input id="n6"  type="image" alt="text6">
+		 <ul id="textn7"> </ul>
+		 <input id="n7"  type="image" alt="text7">
+
+ </div>
+ <br><br><br>
+ <div id="risdiv" style="font-size:1.4em"> INSERISCI RISULTATO IN ARABO: <input type="number" style="height:25px;width:150px;text-align:center; font-size:20px" autocomplete="off" id="numutente" placeholder="Risultato" onKeyDown="if(event.keyCode==13) verifica();" />
+ <button id="bottone2" style="height:25px;width:80px" onclick="verifica()"> VERIFICA </button>
+ <button id="bottone3" style="height:25px;width:200px" onclick="soluzione()"> VISUALIZZA LA SOLUZIONE </button>
+   <br>
+   <p id="spiegazione2"> </p>
+   <p id="risultato"> </p>
+ </div>
+ <input  id="risver" type="number">
+  <hr>
+
+
+ <footer>
+   <h5> 🏠 <a href="homepage.html"> HOME  </a> </h5>
+   <h5> 📝 <a href="arabo-maya.html"> ARABO ➝ MAYA  </a> </h5>
+   <h5> 📖 <a href="guida_utilizzo.html"> GUIDA ALL'UTILIZZO  </a> </h5>
+   <h5> 🔢 <a href="indice_alfabeto.html"> INDICE ALFABETO </a> </h5>
+   <h5> 👨🏻‍💻 <a href="contatti.html"> CONTATTI  </a> </h5>
+   <div class="piedipagina">
+   <span style="font-size:1.2em"> SITO INTERAMENTE SVILUPPATO DA: </span> DAVIDE CASANO, VALERIO CATANIA, GAETANO CUNTO e DANILO GIUFFRIDA
+   </div>
+
+ </footer>
+
+ <script>
+ /* Dichiarazione dell'array di immagini denominato imgArray*/
+var imgArray= new Array();
+imgArray[0] = new Image();
+imgArray[0].src = 'NUMERI_DA_0_A_19/0.png';/* Alla posizione 0 dell'array viene assegnato l'immagine contenende il simbolo maya di valore "0" */
+
+imgArray[1] = new Image();
+imgArray[1].src = 'NUMERI_DA_0_A_19/1.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'NUMERI_DA_0_A_19/2.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'NUMERI_DA_0_A_19/3.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'NUMERI_DA_0_A_19/4.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'NUMERI_DA_0_A_19/5.png';
+
+imgArray[6] = new Image();
+imgArray[6].src = 'NUMERI_DA_0_A_19/6.png';
+
+imgArray[7] = new Image();
+imgArray[7].src = 'NUMERI_DA_0_A_19/7.png';
+
+imgArray[8] = new Image();
+imgArray[8].src = 'NUMERI_DA_0_A_19/8.png';
+
+imgArray[9] = new Image();
+imgArray[9].src = 'NUMERI_DA_0_A_19/9.png';
+
+imgArray[10] = new Image();
+imgArray[10].src = 'NUMERI_DA_0_A_19/10.png';
+
+imgArray[11] = new Image();
+imgArray[11].src = 'NUMERI_DA_0_A_19/11.png';
+
+imgArray[12] = new Image();
+imgArray[12].src = 'NUMERI_DA_0_A_19/12.png';
+
+imgArray[13] = new Image();
+imgArray[13].src = 'NUMERI_DA_0_A_19/13.png';
+
+imgArray[14] = new Image();
+imgArray[14].src = 'NUMERI_DA_0_A_19/14.png';
+
+imgArray[15] = new Image();
+imgArray[15].src = 'NUMERI_DA_0_A_19/15.png';
+
+imgArray[16] = new Image();
+imgArray[16].src = 'NUMERI_DA_0_A_19/16.png';
+
+imgArray[17] = new Image();
+imgArray[17].src = 'NUMERI_DA_0_A_19/17.png';
+
+imgArray[18] = new Image();
+imgArray[18].src = 'NUMERI_DA_0_A_19/18.png';
+
+imgArray[19] = new Image();
+imgArray[19].src = 'NUMERI_DA_0_A_19/19.png';
+var nimm=0;
+var numero=0;
+var resto=0;
+/* La seguente funzione mostra la soluzione */
+function soluzione(){
+numero=document.getElementById("risver").value; /* Assegna a numero il risultato*/
+document.getElementById("risultato").innerHTML="RISULTATO CORRETTO: " + numero; /* Mostra numero quindi il risultato*//* Il seguente ciclo si occupa della conversione tramite divisioni successive*/
+for(var i=0; numero!=0; i++){
+   resto = parseInt(numero % 20);
+   numero= parseInt(numero/20);
+    if(i==0)
+   {
+	document.getElementById("textn7").style.display="block"; /* Rende visibile il simbolo maya*/
+    document.getElementById("textn7").innerHTML="20^"+i+"*"+resto; /* Mostra la descrizione del calcolo eseguito es. "20^1*9"  */
+   }
+
+   if(i==1)
+   {
+	document.getElementById("textn6").style.display="block";
+	document.getElementById("textn6").innerHTML="20^"+i+"*"+resto;
+   }
+
+   if(i==2)
+   {
+	document.getElementById("textn5").style.display="block";
+	document.getElementById("textn5").innerHTML="20^"+i+"*"+resto;
+   }
+
+   if(i==3)
+   {
+	document.getElementById("textn4").style.display="block";
+	document.getElementById("textn4").innerHTML="20^"+i+"*"+resto;
+   }
+
+   if(i==4)
+   {
+	document.getElementById("textn3").style.display="block";
+	document.getElementById("textn3").innerHTML="20^"+i+"*"+resto;
+   }
+   }
+}
+/* La seguente funzione si occupa del confronto tra la selezione dell'utente e il numero maya generato */
+function verifica()
+{
+	if(document.getElementById("numutente").value==document.getElementById("risver").value)
+	{
+		document.getElementById("spiegazione2").innerHTML = "Il valore inserito è corretto!";
+	}
+  else if(document.getElementById("numutente").value>1279999999) /* Verifica se il numero inserito dall'utente è fuori dal range di numeri consentiti */
+  {
+   window.alert("È possibile rappresentare fino ad un massimo di 7 caratteri Maya.")
+  }
+  else if(document.getElementById("numutente").value<0) /* Verifica se l'utente ha inserito un numero negativo */
+  {
+   window.alert("Non è possibile inserire un numero inferiore a zero.")
+  }
+	else
+	{ /* Se il numero inserito dall'utente non è corretto lo segnala a schermo */
+	document.getElementById("spiegazione2").innerHTML = "Il valore inserito non è corretto, riprova.";
+	}
+}
+function converti() {
+resto=0;
+ nimm=Math.floor(Math.random()*(5 - 1 + 1)) + 1;
+ clean(); /* Prima di generare i nuovi simboli si occupa di resettare la finestra */
+ document.getElementById("risdiv").style.display="block"; /* La seguente riga di codice si occupa di generare un numero casuale tra 1 a 5, per poter decidere il range di numeri da generare *//* In quanto eseguendo solo una generazione di numeri casuali da 1 a 3199999 il range valori non avrebbe permesso all'utente di provare combinazioni di simboli maya diverse tra loro	*//* poiché principalmente sarebbero stati generati solo numeri arabi alti, e quindi non si avrebbe quasi mai avuto l'occasione di provare a risolvere un esercizio con meno simboli maya*/
+switch(nimm)
+ {	/* in base al numero "nimm" generato verrà scelto uno dei seguenti range di valori casuali*/
+	case 1:numero=Math.floor(Math.random() * (19 + 1) + 0); break; /* case1: valori con 1 simbolo maya*/
+	case 2:numero=Math.floor(Math.random() * (399 + 1) + 20); break; /* case2: valori con 2 simboli maya*/
+	case 3:numero=Math.floor(Math.random() * (7999 + 1) + 400); break; /* case3: valori con 3 simboli maya*/
+	case 4:numero=Math.floor(Math.random() * (159999 + 1) + 8000); break; /* case4: valori con 4 simboli maya*/
+	case 5:numero=Math.floor(Math.random() * (3199999 + 1) + 160000); break; /* case5: valori con 5 simboli maya*/
+
+ }
+ document.getElementById("risver").value = numero;/* la seguente funzione si occupa della conversione tramite divisioni successive*/
+ for(var i=0; numero!=0; i++){
+   resto = parseInt(numero % 20); /* assegna alla variabile "resto" il resto della divisione per 20 del numero*/
+   numero= parseInt(numero/20);/* assegna alla variabile "numero" il risultato della divisione per 20*/
+
+   if(i==0)
+   {
+    document.getElementById("n7").style.display="block"; /* linea di codice che rende visibile l'immagine*/
+    document.getElementById("n7").src=imgArray[resto].src; /* assegnamento all'elemento m7 il simbolo maya corrispondente*/
+   }
+
+   if(i==1)
+   {
+    document.getElementById("n6").style.display="block";
+    document.getElementById("n6").src=imgArray[resto].src;
+   }
+
+   if(i==2)
+   {
+    document.getElementById("n5").style.display="block";
+    document.getElementById("n5").src=imgArray[resto].src;
+   }
+
+   if(i==3)
+   {
+    document.getElementById("n4").style.display="block";
+    document.getElementById("n4").src=imgArray[resto].src;
+   }
+
+   if(i==4)
+   {
+    document.getElementById("n3").style.display="block";
+    document.getElementById("n3").src=imgArray[resto].src;
+   }
+
+ }
+ }
+
+/* La funzione clean come dal nome si occupa del reset della pagina*/
+function clean(){/* Vengono nascosti nuovamente i bottoni e resettati i testi*/
+ document.getElementById("n1").style.display="none";
+ document.getElementById("n2").style.display="none";
+ document.getElementById("n3").style.display="none";
+ document.getElementById("n4").style.display="none";
+ document.getElementById("n5").style.display="none";
+ document.getElementById("n6").style.display="none";
+ document.getElementById("n7").style.display="none";
+ document.getElementById("textn7").style.display="none";
+	document.getElementById("textn7").innerHTML=""
+	document.getElementById("textn6").style.display="none";
+	document.getElementById("textn6").innerHTML=""
+	document.getElementById("textn5").style.display="none";
+	document.getElementById("textn5").innerHTML=""
+	document.getElementById("textn4").style.display="none";
+	document.getElementById("textn4").innerHTML=""
+	document.getElementById("textn3").style.display="none";
+	document.getElementById("textn3").innerHTML=""
+	document.getElementById("risultato").innerHTML=""
+ document.getElementById("spiegazione2").innerHTML = " ";
+ document.getElementById('risver').value = "";
+ document.getElementById('numutente').value = "";
+ document.getElementById("risdiv").style.display="none";
+ resto=0;
+ numero=0;
+ i=0;
+ }
+function visualizzarisultato(){
+
+}
+</script>
+  </body>
+ </html>

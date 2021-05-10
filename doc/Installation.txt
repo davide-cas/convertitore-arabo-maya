@@ -1,0 +1,30 @@
+﻿Note di installazione del simulatore Convertitore Maya, versione 1.0 
+
+REQUISITI DI SISTEMA 
+   Il software e' compatibile con qualsiasi Sistema Operativo: Unix/Linux, MS Windows, MacOS 
+   che abbia qualsiasi browser aggiornato, nei quali Javascript sia abilitato 
+   e che supporti almeno la versione 5.0 di HTML.    
+
+COMPILAZIONE E INSTALLAZIONE  
+   La versione è distribuita mediante un archivio compresso in
+   formato ZIP: per estrarre il contenuto, accertarsi che il
+   software di compressione/decompressione archivi ZIP sia installato sul
+   sistema in uso. Scaricate correttamente l'archivio in formato ZIP 
+   ed estraetelo in una cartella.  
+
+ESECUZIONE 
+   L'utente può scegliere il tipo di esecuzione del software, se in locale tramite il file "index.html"
+   oppure online tramite il portale di galileo.dmi al link https://galileo.dmi.unict.it/projects/convertitoremaya/.   
+   Per l'esecuzione del software in locale è semplicemente necessario 
+   aprire il file "index.html" presente all'interno della cartella estratta dal download della distribuzione   il link di accesso al convertitore ne lancia l'esecuzione in locale.
+   Cliccando sul link è possibile prelevale il file compresso 
+   nella versione più aggiornata del software, contenente
+   tutti i file che compogono il pacchetto Convertitore Maya.
+ 
+FAQ
+Per eventuali domande,consigli e commenti e' possibile scrivere a :
+
+casano.davide@outlook.it
+cata98@live.it
+gaetano.cnt96@gmail.com
+danilo.giuffrida@hotmail.com

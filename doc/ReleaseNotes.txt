@@ -1,0 +1,35 @@
+Note di rilascio del simulatore Convertitore Maya, versione 1.0"
+
+Questo progetto consente di convertire i numeri dal sistema di rappresentazione
+Maya in numeri Arabi, e viceversa. Possiede inoltre una sezione "esercitazione",
+utile a spronare l'utente nel cimentarsi ad una eventuale conversione manuale.
+L'idea di questo lavoro prende spunto dal progetto "Abaco Maya" (di Roberta Carrubba), 
+che presenta le stesse funzionalita' ma implementate in una maniera diversa.
+ARCHITETTURA DEL SOFTWARE
+   Il programma e' stato realizzato in linguaggio HTML, con l'ausilio dei linguaggi: CSS e 
+   Javascript. Non prevede l'impiego di librerie particolari per l'accesso e l'utilizzo.
+   Questo consente l'accesso al progetto online e/o offline.
+   Nella cartella principale si trova la Homepage "index.html", dalla quale e' possibile
+   accedere al software. Tutte le successive pagine HTML sono accessibili dalla cartella
+   stessa.
+   Le funzioni Javascript sono gia' contenute all'interno dei fogli HTML per favorirne una
+   lettura semplificata.
+
+TECNICHE DI PROGRAMMAZIONE
+   Le funzioni piu' importanti sono le due che si occupano della conversione da Arabo a
+   Maya e da Maya a Arabo, composte da cicli che eseguono la conversione del numero fino
+   ad ottenere il risultato desiderato dall'utente.
+   Le immagini vengono gestite tramite un array di immagini ed inserite nella posizione
+   dell'array corrispondente al loro valore in Arabo, (Es " ... " corrisponde all' indice 
+   3 dell'array di immagini), utile al fine di avere una semplificazione del codice, che
+   nel software "Abaco Maya" (di Roberta Carrubba) non era invece presente.
+   I numeri generati nella modalita' di esercitazione sono quelli rappresentabili fino a    5 cifre Maya, quindi minori di 20^6 = 3200000
+   L'implementazione e' approfondibile nei commenti dei file .html
+COLLAUDI
+   Il progetto e' stato collaudato sui seguenti sistemi operativi e nei rispettivi browser
+   - Windows: Chrome(78.0), Firefox (70.0), Opera (64.0), Microsoft Edge (44.18362.387.0).
+   - MacOS:  Chrome(74.0), Firefox (70.0), Opera (64.0).
+   - Linux: Chrome(76.0), Firefox (70.0), Opera (64.0).FONTI DELLE IMMAGINI   Background: https://hdwallsbox.com/maya/
+IDEE PER ULTERIORI SVILUPPI
+   - Migliorare la compatibilita' su Smartphone e/o Tablet.
+   - Aggiunta di animazioni per una miglioria grafica.

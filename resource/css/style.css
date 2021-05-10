@@ -1,0 +1,555 @@
+/* Formattazione dei link */
+a:link {
+  color: white;
+  text-decoration:underline;
+  font-style:normal;
+}
+a:visited {
+  color: white;
+  text-decoration:underline;
+  font-style:normal;
+}
+
+a:hover {
+  color: white;
+  text-decoration:underline;
+  font-style:normal;
+  font-size: 105%;
+}
+
+a:active {
+  color: white;
+  text-decoration:underline;
+  font-style:normal;
+}
+.center{
+	text-align: center;
+}
+
+.eslink {
+  float: right;
+  font-size: 1.7vw;
+  margin-right: 1%;
+  }
+.imgmoodle{
+	text-align:left;
+}
+/* formattazione del body della pagina */
+body {
+  color: white;
+  letter-spacing: 0.5px;
+  font-family: Impact, Helvetica, sans-serif;
+  font-size: 1.7vw; /* dimensione indicata con vw in modo da renderla scalabile in base alla risoluzione */
+  text-shadow: 1.3px 1.3px black;
+  font-weight: normal;
+  width: 99.5%;
+  height: auto;
+  line-height: 6px;
+  background-image:url('../images/maya.jpg');
+  background-size: cover;
+
+}
+
+.text_guida{
+  font-size: 1.7vw;
+  line-height: 90%;
+}
+
+#blocks-section {
+  text-align: center;
+  margin: 3%;
+}
+/* blocco background */
+.block {
+  display: inline-block;
+  margin:4%;
+  background-image: url('../images/background.JPG');
+  font-size: 1.7vw;
+  background-color: white;
+  border: 3px white solid;
+  padding: 28px;
+  text-align: center;
+  width: 28%;
+  height: 28%;
+}
+/* pi+ di pagina */
+.piedipagina {
+  font-size: 1.3vw;
+  line-height:90%;
+  height: 5%;
+}
+/* bottoni per input utente */
+.BOTTONE0 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/0.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE1 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE2 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE3 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/3.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE4 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/4.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE5 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/5.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE6 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/6.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE7 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/7.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE8 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/8.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE9 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/9.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE10 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/10.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE11 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/11.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE12 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/12.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE13 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/13.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE14 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/14.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE15 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/15.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE16 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/16.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE17 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/17.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE18 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/18.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+.BOTTONE19 {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        background-image: url('../NUMERI_DA_0_A_19/19.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        margin: 2px;
+}
+/* I seguenti tag si riferiscono a bottni e testi che vengono generati nascosti e non visibili all'utente */
+#risver{
+	display:none; /* display: none = il testo risver sarà nascosto finché non modificato da javascript */
+}
+#risdiv{
+	display:none;
+}
+/* testi nascosti */
+#textn6 {
+  display: none;
+  float: right;
+  margin-right:80%;
+}
+#textn7 {
+  display: none;
+   float: right;
+   margin-right:80%;
+}
+#textn3 {
+  display: none;
+   float: right;
+   margin-right:80%;
+}
+#textn4 {
+  display: none;
+  float: right;
+  margin-right:80%;
+}
+#textn5 {
+  display: none;
+   float: right;
+   margin-right:80%;
+}
+
+#textnn6 {
+  display: none;
+  float: right;
+  margin-right:80%;
+   width:50%
+}
+#textnn7 {
+  display: none;
+   float: right;
+   margin-right:80%;
+     width:50%
+}
+#textnn3 {
+  display: none;
+   float: right;
+   margin-right:80%;
+    width:50%
+}
+#textnn4 {
+  display: none;
+  float: right;
+  margin-right:80%;
+   width:50%
+}
+#textnn5 {
+  display: none;
+   float: right;
+   margin-right:80%;
+     width:50%
+}
+#textnn2 {
+  display: none;
+   float: right;
+   margin-right:80%;
+    width:50%
+}
+#textnn1 {
+  display: none;
+   float: right;
+   margin-right:80%;
+    width:50%
+}
+
+#hidenumber{
+	  display: none;
+}
+/* immagini nascosti */
+#n1{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+
+#n2{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#n3{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#n4{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#n5{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#n6{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#n7{
+ width: 4%;
+ height: 4%;
+   display: none;
+   background-color: white;
+}
+#k1{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+
+#k2{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#k3{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#k4{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#k5{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#k6{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#k7{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#cancel{
+ width: 25%;
+ height: 25%;
+   display: none;
+}
+#r1{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+
+#r2{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#r3{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#r4{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#r5{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#r6{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#r7{
+ width: 25%;
+ height: 25%;
+   display: none;
+   background-color: white;
+}
+#m1{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m2{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m3{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m4{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m5{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m6{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#m7{
+ width: 70px;
+ height: 70px;
+   display: none;
+   background-color: white;
+}
+#textm5 {
+  display: block;
+   float: right;
+   width:15%;
+}
+/* colonne di selezione utente, visualizzazione risultato e spiegazione... */
+#mayapos {visibility: visible; float:right; width:60%;}
+#mayapos2 {visibility: visible;  float:right; width: 15%;}
+#mayapos3 {visibility: visible; float:right; width: 15%;}
+#mayapos4 {visibility: visible; float:right; width: 15%;}
+#mayapos5 {visibility: visible; float:right; width: 30%;}
+
+#spiegazione2 {line-height: 0.9}
+
+#calcoli{ line-height:1}
+
+#w3c{ margin-left: 100%}
